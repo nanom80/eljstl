@@ -9,8 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/10")
+@WebServlet("/10_color_jstl")
 public class Servlet10Controller extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
 	//url 파라미터에 따라서 변경되는거 확인
@@ -20,7 +21,10 @@ public class Servlet10Controller extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		System.out.println("/10");
+		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/10_color_jstl.jsp");
+		
 		rd.forward(request, response);
 
 	}
